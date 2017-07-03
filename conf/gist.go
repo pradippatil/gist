@@ -14,10 +14,9 @@ const (
 	GitIOURL = "https://git.io"
 )
 
-// Gist status codes
-// See:
+// Gist API status codes
 const (
-	StatusCreated = 201 // RFC 7231, 6.3.2
+	StatusCreated = 201
 	/*
 		StatusAccepted             = 202 // RFC 7231, 6.3.3
 		StatusNonAuthoritativeInfo = 203 // RFC 7231, 6.3.4
