@@ -57,7 +57,6 @@ func upload(cmd *cobra.Command, args []string) {
 		cmd.Usage()
 		os.Exit(1)
 	}
-	fmt.Println(len(files))
 
 	gist := conf.Gist{}
 
@@ -90,12 +89,10 @@ func upload(cmd *cobra.Command, args []string) {
 	// This is the format of the automatic naming scheme that Gist uses internally.
 	// Check: https://developer.github.com/v3/gists/#create-a-gist
 
-	fmt.Printf("%+v", gist)
 	b, err := json.Marshal(gist)
 	if err != nil {
 		log.Fatal(err)
 	}
-	fmt.Println(string(b))
 	req, err := http.NewRequest("POST", conf.GistAPIURL, bytes.NewBuffer(b))
 	req.Header.Set("Content-Type", "application/json")
 
@@ -117,8 +114,7 @@ func upload(cmd *cobra.Command, args []string) {
 	if err := json.Unmarshal(body, &g); err != nil {
 		log.Fatal(err)
 	}
-	fmt.Printf("HTML Url: %s\n", g.HTMLURL)
-	fmt.Printf("Description : %s\n", g.Decription)
+	fmt.Printf("access it using url: %s\n", g.HTMLURL)
 
 }
 

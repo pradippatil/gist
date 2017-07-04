@@ -39,6 +39,7 @@ to quickly create a Cobra application.`,
 	Run: func(cmd *cobra.Command, args []string) {
 		fmt.Println("update called")
 	},
+	Hidden: true,
 }
 
 func init() {

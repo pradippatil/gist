@@ -39,6 +39,7 @@ to quickly create a Cobra application.`,
 	/*Run: func(cmd *cobra.Command, args []string) {
 		fmt.Println("show called")
 	},*/
+	Hidden: true,
 }
 
 // showCmd represents the show command
@@ -54,6 +55,7 @@ to quickly create a Cobra application.`,
 	Run: func(cmd *cobra.Command, args []string) {
 		fmt.Println("show config called")
 	},
+	Hidden: true,
 }
 
 func init() {

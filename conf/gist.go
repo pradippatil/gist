@@ -1,7 +1,5 @@
 package conf
 
-// Package lib is a library interacting with https://api.gihub.com/gists API
-
 // GitHub API constants
 const (
 	GitHubAPIURL = "https://api.github.com"
